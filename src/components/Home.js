@@ -1,8 +1,7 @@
 import React, {useRef, useEffect} from 'react'
 import {gsap} from 'gsap'
-import logo from './logo.svg';
-import './App.css';
-import { Link } from 'react-router-dom';
+import logo from '../logo.svg';
+import '../App.css';
 
 const Home = () => {
   let logoItem = useRef(null)
@@ -25,6 +24,7 @@ const Home = () => {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a href='/circle-animation'>Circle Animation</a>
+        <a href='/image-loading'>Image Loading</a>
       </header>
     </div>
   )

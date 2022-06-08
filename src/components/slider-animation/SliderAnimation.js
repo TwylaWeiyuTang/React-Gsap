@@ -112,13 +112,16 @@ const SliderAnimation = () => {
 
             slideLeft(2, 1, 2)
 
-            // move the second image out of the box
-            slideRight(0, 1)
-
-            slideRight(1, 1)
-
             //scale the image when slide to it
             scale(2, 1);
+
+
+
+            // move the first image to right
+            slideRight(0, 1)
+
+            // move the second image to right as well
+            slideRight(1, 1)
 
             // fade out the first text
             fadeOut(0, 1)
@@ -128,8 +131,35 @@ const SliderAnimation = () => {
     
         } else if (imageList.children[1].classList.contains('active')) {
             setState({isActive2: false, isActive1: true})
+
+            slideLeft(0, 0);
+            slideRight(0, 1, 0);
+            slideRight(1, 1, 0);
+            slideRight(2, 1, 2);
+            scale(0, 1);
+            //content transtion
+            fadeOut(1, 1);
+            fadeIn(0, 1);
+
         } else if (imageList.children[2].classList.contains('active')) {
             setState({isActive3: false, isActive2: true})
+
+            // move the second one to the left by 2
+            slideLeft(1, 0, 2)
+
+            // move the second one to the left by 1
+            slideLeft(1, 1)
+
+            // move the third one to the right
+            slideRight(2, 1)
+
+            // move the third one to the left by 1 so it's next to the next image
+            slideLeft(2, 1)
+
+            scale(1, 1);
+
+            fadeOut(2, 1);
+            fadeIn(1, 1);
         }
     }
 

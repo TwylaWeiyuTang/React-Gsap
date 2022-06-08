@@ -26,6 +26,7 @@ const Home = () => {
         <a href='/circle-animation'>Circle Animation</a>
         <a href='/image-loading'>Image Loading</a>
         <a href='/slider-animation'>Slider Animation</a>
+        <a href='/hero-section-animation'>Hero Section Animation</a>
       </header>
     </div>
   )
